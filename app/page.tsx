@@ -1,5 +1,4 @@
 import { stripe } from "@/lib/stripe";
-import Link from "next/link";
 import Image from "next/image";
 
 import HomepageProducts from "@/components/ui/HomepageProducts";
