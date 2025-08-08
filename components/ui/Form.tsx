@@ -12,7 +12,7 @@ const Form = () => {
       </div>
       <form
         action=""
-        className="border border-black px-4 py-2.5 flex justify-between "
+        className="mx-8 border border-black px-4 py-2.5 flex justify-between "
       >
         <input type="text" placeholder="Enter email adress" />
         <button type="submit" className="ml-2 text-black">

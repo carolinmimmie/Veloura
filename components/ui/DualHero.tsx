@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Button from "./button";
 
 const DualHero = () => {
   return (
@@ -11,9 +12,7 @@ const DualHero = () => {
         <Image src="/images/sage.jpg" alt="hero2" fill objectFit="cover" />
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-end mb-12">
-        <button className="rounded-none py-4 px-18 bg-transparent border border-white text-white font-extralight text-sm uppercase">
-          Summer sale
-        </button>
+        <Button />
       </div>
     </div>
   );

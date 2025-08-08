@@ -5,7 +5,8 @@ import Image from "next/image";
 import HomepageProducts from "@/components/ui/HomepageProducts";
 import Form from "@/components/ui/Form";
 import DualHero from "@/components/ui/DualHero";
-import { Button } from "@/components/ui/Button";
+import Button from "@/components/ui/button";
+
 export default async function Home() {
   // 2. Anropar Stripe API:t för att hämta produkter
 
@@ -27,17 +28,11 @@ export default async function Home() {
           />
         </div>
         <div className="absolute bg-opacity-40 " />
-        <div className="relative z-10 text-center text-white px-4 flex flex-col gap-8 pt-38">
+        <div className="relative z-10 text-center text-white px-4 flex flex-col gap-8 pt-86">
           <h2 className="text-xl md:text-8xl font-extralight">Summer Sale</h2>
           <p className="mb-6 text-4xl">Up to 40% off</p>
           <div className="mt-16">
-            <Button
-              asChild
-              variant="default"
-              className="rounded-none py-6 px-18 bg-transparent border border-white text-white font-extralight text-sm"
-            >
-              <Link href="/products">Summer sale</Link>
-            </Button>
+            <Button />
           </div>
         </div>
       </section>
