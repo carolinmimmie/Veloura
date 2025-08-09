@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Form from "@/components/Form";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +20,9 @@ export default function RootLayout({
       <body>
         <Navbar />
         <main>{children}</main>
+        <section className="flex justify-center py-10">
+          <Form />
+        </section>
         <Footer />
       </body>
     </html>

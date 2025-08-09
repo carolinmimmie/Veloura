@@ -41,9 +41,6 @@ export default async function Home() {
       <section>
         <DualHero />
       </section>
-      <section className="flex justify-center py-10">
-        <Form />
-      </section>
     </div>
   );
 }
