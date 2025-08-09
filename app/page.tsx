@@ -1,10 +1,10 @@
 import { stripe } from "@/lib/stripe";
 import Image from "next/image";
 
-import HomepageProducts from "@/components/ui/HomepageProducts";
-import Form from "@/components/ui/Form";
-import DualHero from "@/components/ui/DualHero";
-import Button from "@/components/ui/button";
+import HomepageProducts from "@/components/HomepageProducts";
+import Form from "@/components/Form";
+import DualHero from "@/components/DualHero";
+import Button from "@/components/Button";
 
 export default async function Home() {
   // 2. Anropar Stripe API:t för att hämta produkter
