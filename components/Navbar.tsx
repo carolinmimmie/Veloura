@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <nav
       className={`top-0 left-0 w-full z-50 uppercase fixed ${
-        isHome ? "bg-transparent" : "bg-white"
+        isHome ? "bg-transparent" : "bg-transparant"
       }`}
     >
       <div

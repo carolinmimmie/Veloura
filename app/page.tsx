@@ -2,7 +2,6 @@ import { stripe } from "@/lib/stripe";
 import Image from "next/image";
 
 import HomepageProducts from "@/components/HomepageProducts";
-import Form from "@/components/Form";
 import DualHero from "@/components/DualHero";
 import Button from "@/components/Button";
 

@@ -11,10 +11,10 @@ const ProductList = ({ products }: Props) => {
       {/* <div>
         <input type="text" placeholder="Search products....." />
       </div> */}
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+      <ul className="flex flex-wrap gap-6 uppercase">
         {products.map((product, key) => {
           return (
-            <li key={key}>
+            <li className="flex" key={key}>
               <ProductCard product={product} />
             </li>
           );

@@ -11,17 +11,17 @@ const ProductCard = ({ product }: Props) => {
   const price = product.default_price as Stripe.Price;
   return (
     <Link href={"/products/1"}>
-      <div className="flex flex-col items-center gap-3 pt-6">
+      <div className="flex flex-col items-center gap-3 pt-6  ">
         <div className=" flex flex-col align-middle">
           {product.images && product.images[0] && (
-            <div>
+            <div className="relative w-[420px] h-[500px]">
               <Image
                 src={product.images[0]}
                 alt={product.name}
-                //   layout="fill"
-                width={450}
-                height={500}
-                objectFit="cover"
+                fill
+                // width={450}
+                // height={500}
+                objectFit="contain"
               />
             </div>
           )}
