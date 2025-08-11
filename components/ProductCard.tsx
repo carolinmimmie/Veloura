@@ -10,8 +10,8 @@ interface Props {
 const ProductCard = ({ product }: Props) => {
   const price = product.default_price as Stripe.Price;
   return (
-    <Link href={"/products/1"}>
-      <div className=" ">
+    <Link href={`/products/${product.id}`}>
+      <div className="flex flex-col gap-2">
         <div className=" ">
           {product.images && product.images[0] && (
             <div className="relative w-full h-[500px]">
