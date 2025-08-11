@@ -2,8 +2,12 @@ import ProductDetail from "@/components/ProductDetail";
 import { stripe } from "@/lib/stripe";
 import React from "react";
 
+type Props = {
+  params: { id: string };
+};
+
 // Serverkomponent som tar emot "params" med produktens id från URL:en
-const ProductPage = async ({ params }: { params: { id: string } }) => {
+const ProductPage = async ({ params }: Props) => {
   // Hämtar produktdata från Stripe baserat på produktens id
   // "expand" gör att vi får med detaljer om default priset direkt i svaret
   const product = await stripe.products.retrieve(params.id, {
