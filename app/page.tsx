@@ -4,6 +4,7 @@ import Image from "next/image";
 import HomepageProducts from "@/components/HomepageProducts";
 import DualHero from "@/components/DualHero";
 import Button from "@/components/Button";
+import Link from "next/link";
 
 export default async function Home() {
   // 2. Anropar Stripe API:t för att hämta produkter
@@ -28,7 +29,9 @@ export default async function Home() {
         <div className="absolute inset-0 bg-opacity-40 " />
         <div className="absolute inset-0 flex flex-col items-center justify-end z-10 text-white px-4 gap-22">
           <div className="flex flex-col items-center gap-4">
-            <h2 className="text-xl md:text-8xl font-extralight">Summer Sale</h2>
+            <h2 className="text-xl md:text-8xl font-extralight">
+              Season Favorites
+            </h2>
             <p className="text-4xl">Up to 40% off</p>
           </div>
           <div className="mb-12">
@@ -37,7 +40,9 @@ export default async function Home() {
         </div>
       </section>
       <section className="py-10 px-6">
-        <HomepageProducts products={products.data} />
+        <Link href="/products">
+          <HomepageProducts products={products.data} />
+        </Link>
       </section>
       <section>
         <DualHero />

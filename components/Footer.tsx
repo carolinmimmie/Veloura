@@ -7,25 +7,25 @@ const Footer = () => {
         <div className="flex flex-col gap-6">
           <h4 className="font-extralight uppercase text-xs">About</h4>
           <div className="flex flex-col gap-4 text-xs font-light pb-12">
-            <p>Levoura</p>
-            <p>Responsibilty</p>
-            <p>Career</p>
-            <p>Re-sellers</p>
+            <p>Veloura Story</p>
+            <p>Our Commitment</p>
+            <p>Join Our Team</p>
+            <p>Partners</p>
           </div>
         </div>
         <div className="flex flex-col gap-6">
           <h4 className="font-extralight uppercase text-xs">Support</h4>
           <div className="flex flex-col gap-4 text-xs font-light pb-12">
-            <p>Contact</p>
-            <p>FAQ</p>
-            <p>Returns</p>
+            <p>Get in Touch</p>
+            <p>Help Center</p>
+            <p>Return Policy</p>
           </div>
         </div>
         <div className="flex flex-col gap-6">
           <h4 className="font-extralight uppercase text-xs">Social</h4>
           <div className="flex flex-col gap-4 text-xs font-light pb-12">
             <p>Instagram</p>
-            <p>Tiktok</p>
+            <p>TikTok</p>
           </div>
         </div>
         <div className="flex flex-col gap-6">
@@ -33,7 +33,7 @@ const Footer = () => {
             Terms & conditionals
           </h4>
           <div className="flex flex-col gap-4 text-xs font-light pb-12">
-            <p>Privacy policiy</p>
+            <p>Privacy Policy</p>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@ const Footer = () => {
         <h2 className="text-xl font-extralight tracking-wide">Veloura</h2>
         <div>
           <p className="text-[10px] font-extralight">
-            2025 Veloura. All rights reserved{" "}
+            2025 Veloura © All rights reserved
           </p>
         </div>
       </div>

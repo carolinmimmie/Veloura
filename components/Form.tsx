@@ -4,10 +4,10 @@ const Form = () => {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2 ml-8 text-center">
-        <h3 className="uppercase tracking-widest">Join the list</h3>
+        <h3 className="uppercase tracking-widest">Never Miss Out</h3>
         <p>
-          Be the first to know about new arrivals, collections and exclusive
-          releases.
+          Don’t miss out on the latest arrivals, curated collections, and
+          special editions.
         </p>
       </div>
       <form

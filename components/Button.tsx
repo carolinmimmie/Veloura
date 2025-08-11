@@ -1,10 +1,13 @@
+import Link from "next/link";
 import React from "react";
 
 const Button = () => {
   return (
-    <button className="rounded-none py-4 px-18 bg-transparent border border-white text-white font-extralight text-sm uppercase">
-      Summer sale
-    </button>
+    <Link href={"/products"}>
+      <button className="rounded-none py-4 px-18 bg-transparent border border-white text-white font-extralight text-sm uppercase">
+        Discover Now
+      </button>
+    </Link>
   );
 };
 
