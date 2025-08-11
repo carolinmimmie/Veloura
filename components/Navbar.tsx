@@ -12,11 +12,11 @@ export const Navbar = () => {
       }`}
     >
       <div
-        className={`container mx-auto flex items-center justify-between py-2 px-4 ${
+        className={`container flex-row-reverse mx-auto flex items-center justify-between py-2 px-4 ${
           isHome ? "text-white" : "text-black"
         }`}
       >
-        <div className="hidden md:flex gap-8 font-extralight text-xs">
+        <div className="flex gap-2 md:gap-8 font-extralight text-xs">
           <Link href="/">Home</Link>
           <Link href="/products">Products</Link>
           <Link href="/checkout">Checkout</Link>

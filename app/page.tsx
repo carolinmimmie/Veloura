@@ -16,20 +16,22 @@ export default async function Home() {
 
   return (
     <div>
-      <section className="relative h-[66vh] w-full flex items-center justify-center uppercase tracking-widest">
-        <div>
+      <section className="relative h-[56vh] w-full uppercase tracking-widest">
+        <div className="absolute inset-0">
           <Image
             alt="Banner image"
             src={products.data[3].images[0]}
             fill
-            className="object-fit"
+            className="object-cover"
           />
         </div>
-        <div className="absolute bg-opacity-40 " />
-        <div className="relative z-10 text-center text-white px-4 flex flex-col gap-8 pt-86">
-          <h2 className="text-xl md:text-8xl font-extralight">Summer Sale</h2>
-          <p className="mb-6 text-4xl">Up to 40% off</p>
-          <div className="mt-16">
+        <div className="absolute inset-0 bg-opacity-40 " />
+        <div className="absolute inset-0 flex flex-col items-center justify-end z-10 text-white px-4 gap-22">
+          <div className="flex flex-col items-center gap-4">
+            <h2 className="text-xl md:text-8xl font-extralight">Summer Sale</h2>
+            <p className="text-4xl">Up to 40% off</p>
+          </div>
+          <div className="mb-12">
             <Button />
           </div>
         </div>

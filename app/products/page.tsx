@@ -9,8 +9,10 @@ export default async function ProductsPage() {
   console.log(products);
 
   return (
-    <div className="pt-18 px-8">
-      <h2 className="uppercase text-center text-xs font-extralight">New in</h2>
+    <div className="py-18">
+      <h2 className="uppercase text-center text-xs font-extralight pb-6">
+        New in
+      </h2>
       <ProductList products={products.data} />
     </div>
   );
