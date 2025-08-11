@@ -2,12 +2,14 @@ import ProductDetail from "@/components/ProductDetail";
 import { stripe } from "@/lib/stripe";
 import React from "react";
 
-type Props = {
-  params: { id: string };
-};
+interface Params {
+  params: {
+    id: string;
+  };
+}
 
 // Serverkomponent som tar emot "params" med produktens id från URL:en
-const ProductPage = async ({ params }: Props) => {
+const ProductPage = async ({ params }: Params) => {
   // Hämtar produktdata från Stripe baserat på produktens id
   // "expand" gör att vi får med detaljer om default priset direkt i svaret
   const product = await stripe.products.retrieve(params.id, {
@@ -22,5 +24,4 @@ const ProductPage = async ({ params }: Props) => {
   return <ProductDetail product={plainProduct} />;
 };
 
-// Exporterar sidan så Next.js kan använda den när någon går till produktsidan
 export default ProductPage;
