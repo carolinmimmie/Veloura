@@ -22,7 +22,7 @@ export const Navbar = () => {
           <Link href="/checkout">Checkout</Link>
         </div>
         <div>
-          <Link href="/" className="font-light text-2xl">
+          <Link href="/" className="font-light text-xl sm:text-2xl">
             Veloura
           </Link>
         </div>

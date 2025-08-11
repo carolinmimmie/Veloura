@@ -39,7 +39,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="py-10 px-6">
+      <section className="py-10 sm:px-12">
         <Link href="/products">
           <HomepageProducts products={products.data} />
         </Link>
