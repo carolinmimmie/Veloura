@@ -2,18 +2,18 @@ import ProductDetail from "@/components/ProductDetail";
 import { stripe } from "@/lib/stripe";
 import React from "react";
 
-interface Params {
-  params: {
-    id: string;
-  };
+interface PageProps {
+  params: { id: string | string[] }; // kan vara string eller string[]
 }
 
-const ProductPage = async ({ params }: Params) => {
-  const product = await stripe.products.retrieve(params.id, {
+const ProductPage = async ({ params }: PageProps) => {
+  // Om id är en array (t.ex. pga catch-all routes) plocka första elementet
+  const id = Array.isArray(params.id) ? params.id[0] : params.id;
+
+  const product = await stripe.products.retrieve(id, {
     expand: ["default_price"],
   });
 
-  // Kolla att produkten och default_price finns
   if (!product || !product.default_price) {
     return <div>Produkten kunde inte hittas.</div>;
   }
