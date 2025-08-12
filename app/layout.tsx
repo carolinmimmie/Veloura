@@ -20,9 +20,6 @@ export default function RootLayout({
       <body>
         <Navbar />
         <main>{children}</main>
-        <section className="flex justify-center py-10 px-8">
-          <Form />
-        </section>
         <Footer />
       </body>
     </html>

@@ -33,23 +33,26 @@ const ProductDetail = ({ product }: Props) => {
   };
 
   return (
-    <div className="py-12">
+    <div className="py-12 px-8 flex flex-col sm:flex-row gap-6 ">
       {product.images && product.images[0] && (
-        <div className="relative h-60 w-full">
+        <div className="relative h-100 sm:h-180 w-full">
           <Image
             src={product.images[0]}
             alt={product.name}
             layout="fill"
-            objectFit="cover"
+            objectFit="conatin"
           />
         </div>
       )}
-      <div>
-        <h2>{product.name}</h2>
-        <p>{product.description}</p>
-        {price && price.unit_amount && (
-          <p className="">${(price.unit_amount / 100).toFixed(2)}</p>
-        )}
+      <div className="flex flex-col gap-6 justify-center">
+        <div className="flex justify-between uppercase tracking-widest text-sm font-light">
+          <h2 className=""> {product.name}</h2>
+          {price && price.unit_amount && (
+            <p className="tracking ">${(price.unit_amount / 100).toFixed(2)}</p>
+          )}
+        </div>
+        <p className="tracking-widest font-light">{product.description}</p>
+
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={() => removeItem(product.id)}

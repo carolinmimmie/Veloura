@@ -5,6 +5,7 @@ import HomepageProducts from "@/components/HomepageProducts";
 import DualHero from "@/components/DualHero";
 import Button from "@/components/Button";
 import Link from "next/link";
+import Form from "@/components/Form";
 
 export default async function Home() {
   // 2. Anropar Stripe API:t för att hämta produkter
@@ -46,6 +47,9 @@ export default async function Home() {
       </section>
       <section>
         <DualHero />
+      </section>
+      <section className="flex justify-center py-10 px-8">
+        <Form />
       </section>
     </div>
   );
