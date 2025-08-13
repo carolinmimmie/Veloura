@@ -12,7 +12,7 @@ const DualHero = () => {
         <Image src="/images/sage.jpg" alt="hero2" fill objectFit="cover" />
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-end mb-12">
-        <Button />
+        <Button text="Discover Now" href="/products" />
       </div>
     </div>
   );

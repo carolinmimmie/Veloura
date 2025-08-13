@@ -3,6 +3,7 @@
 import { useCartStore } from "@/store/cart-store"; // Hämtar zustand store för kundvagn
 import Image from "next/image"; // Next.js komponent för optimerade bilder
 import { checkoutAction } from "./checkout-action";
+import Button from "@/components/Button";
 
 export default function CheckoutPage() {
   // Hämtar data och funktioner från kundvagnsstore
@@ -17,15 +18,18 @@ export default function CheckoutPage() {
   // Om kundvagnen är tom, visa meddelande och sluta rendera här
   if (total === 0 || items.length === 0) {
     return (
-      <div>
-        <h3>Your cart is empty</h3>
+      <div className="flex flex-col items-center justify-center min-h-screen gap-6">
+        <h3 className="uppercase font-extralight text-3xl">
+          Your bag is empty
+        </h3>
+        <Button text="Continue shopping" href="/" />
       </div>
     );
   }
 
   // Om kundvagnen inte är tom, rendera orderöversikt
   return (
-    <div className="pt-28 uppercase text-center text-xs font-extralight">
+    <div className="pt-28 uppercase text-center text-xs font-extralight min-h-screen">
       <h2>Order summary</h2>
 
       {/* Container för alla produkter */}
@@ -89,8 +93,7 @@ export default function CheckoutPage() {
       {/* Formulär för att gå vidare produkten till betalning till stripe*/}
       <form action={checkoutAction}>
         <input type="hidden" name="items" value={JSON.stringify(items)} />
-        <button type="submit">Proceed to payment</button>
-        {/* <button onClick={() => clearCart()}>Clear Cart</button> */}
+        <Button text="Checkout" type="submit" />
       </form>
     </div>
   );

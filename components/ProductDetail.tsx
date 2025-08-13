@@ -33,7 +33,7 @@ const ProductDetail = ({ product }: Props) => {
   };
 
   return (
-    <div className="px-0 sm:px-16 py-18 flex flex-col sm:flex-row gap-6">
+    <div className="px-0 sm:px-16 py-18 flex flex-col sm:flex-row gap-6 min-h-screen">
       {product.images && product.images[0] && (
         <div className="relative h-100  w-full">
           <Image

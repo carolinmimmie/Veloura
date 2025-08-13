@@ -1,13 +1,38 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
-const Button = () => {
+interface ButtonProps {
+  text: string;
+  href?: string;
+  type?: "button" | "submit" | "reset";
+}
+
+const Button = ({ text, href, type = "button" }: ButtonProps) => {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const classes = `rounded-none py-4 px-18 bg-transparent border font-extralight text-sm uppercase${
+    isHome ? " border-white text-white " : " border-black text-black"
+  }`;
+
+  if (href) {
+    // Rendera som länk
+    return (
+      <Link href={href}>
+        <button className={classes} type="button">
+          {text}
+        </button>
+      </Link>
+    );
+  }
+
+  // Rendera som vanlig knapp
   return (
-    <Link href={"/products"}>
-      <button className="rounded-none py-4 px-18 bg-transparent border border-white text-white font-extralight text-sm uppercase">
-        Discover Now
-      </button>
-    </Link>
+    <button className={classes} type={type}>
+      {text}
+    </button>
   );
 };
 

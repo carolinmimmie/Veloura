@@ -37,7 +37,7 @@ export default async function Home() {
             <p className="text-4xl">Up to 40% off</p>
           </div>
           <div className="mb-12">
-            <Button />
+            <Button text="Discover Now" href="/products" />
           </div>
         </div>
       </section>
