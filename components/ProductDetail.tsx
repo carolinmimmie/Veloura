@@ -33,19 +33,20 @@ const ProductDetail = ({ product }: Props) => {
   };
 
   return (
-    <div className="py-12 px-8 flex flex-col sm:flex-row gap-6 ">
+    <div className="px-0 sm:px-16 py-18 flex flex-col sm:flex-row gap-6">
       {product.images && product.images[0] && (
-        <div className="relative h-100 sm:h-180 w-full">
+        <div className="relative h-100  w-full">
           <Image
             src={product.images[0]}
             alt={product.name}
             layout="fill"
             objectFit="conatin"
+            priority
           />
         </div>
       )}
-      <div className="flex flex-col gap-6 justify-center">
-        <div className="flex justify-between uppercase tracking-widest text-sm font-light">
+      <div className="flex flex-col gap-6 justify-center px-8">
+        <div className="flex flex-row gap-0 sm:flex-col sm:gap-4 justify-between uppercase tracking-widest text-sm font-light">
           <h2 className=""> {product.name}</h2>
           {price && price.unit_amount && (
             <p className="tracking ">${(price.unit_amount / 100).toFixed(2)}</p>
@@ -56,17 +57,12 @@ const ProductDetail = ({ product }: Props) => {
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={() => removeItem(product.id)}
-            className="bg-white px-3 py-1 rounded cursor-pointer border border-gray-300 hover:bg-gray-100"
+            className="cursor-pointer"
           >
             -
           </button>
-          <span className="min-w-[20px] text-center font-medium">
-            {quantity}
-          </span>
-          <button
-            onClick={onAddItem}
-            className="bg-black px-3 py-1 rounded cursor-pointer text-white hover:bg-gray-800"
-          >
+          <span className="normal">{quantity}</span>
+          <button onClick={onAddItem} className="cursor-pointer">
             +
           </button>
         </div>

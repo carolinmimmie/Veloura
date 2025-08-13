@@ -20,6 +20,7 @@ const ProductCard = ({ product }: Props) => {
                 alt={product.name}
                 fill
                 objectFit="cover"
+                priority
               />
             </div>
           )}

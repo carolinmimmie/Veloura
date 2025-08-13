@@ -6,13 +6,10 @@ export default async function ProductsPage() {
   const products = await stripe.products.list({
     expand: ["data.default_price"],
   });
-  console.log(products);
 
   return (
-    <div className="pt-18">
-      <h2 className="uppercase text-center text-xs font-extralight pb-6">
-        New in
-      </h2>
+    <div className="pt-28">
+      <h2 className="uppercase text-center text-xs font-extralight">New in</h2>
       <ProductList products={products.data} />
     </div>
   );

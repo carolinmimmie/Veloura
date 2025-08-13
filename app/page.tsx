@@ -25,6 +25,7 @@ export default async function Home() {
             src={products.data[3].images[0]}
             fill
             className="object-cover"
+            priority
           />
         </div>
         <div className="absolute inset-0 bg-opacity-40 " />
