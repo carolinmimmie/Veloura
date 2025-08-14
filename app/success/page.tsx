@@ -1,6 +1,6 @@
 "use client";
+import Button from "@/components/Button";
 import { useCartStore } from "@/store/cart-store";
-import Link from "next/link";
 import React, { useEffect } from "react";
 
 const SuccessPage = () => {
@@ -11,10 +11,12 @@ const SuccessPage = () => {
   }, [clearCart]);
 
   return (
-    <div>
-      <h3>Payment successfull</h3>
-      <p>Thank you</p>
-      <Link href={"/products"}>Continue shopping</Link>
+    <div className="flex flex-col items-center justify-center min-h-screen gap-6">
+      <h3 className="uppercase font-extralight text-3xl">
+        Payment successfull
+      </h3>
+      <p className="uppercase font-extralight text-2xl">Thank you</p>
+      <Button text="Continue shopping" href="/products" />
     </div>
   );
 };
