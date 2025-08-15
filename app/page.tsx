@@ -24,7 +24,7 @@ export default async function Home() {
             alt="Banner image"
             src={products.data[3].images[0]}
             fill
-            className="object-cover"
+            objectFit="cover"
             priority
           />
         </div>

@@ -35,17 +35,17 @@ const ProductDetail = ({ product }: Props) => {
   return (
     <div className="px-0 sm:px-16 py-18 flex flex-col sm:flex-row gap-6 min-h-screen">
       {product.images && product.images[0] && (
-        <div className="relative h-100  w-full">
+        <div className="relative h-200  w-full sm:w-1/2">
           <Image
             src={product.images[0]}
             alt={product.name}
             layout="fill"
-            objectFit="conatin"
+            objectFit="cover"
             priority
           />
         </div>
       )}
-      <div className="flex flex-col gap-6 justify-center px-8">
+      <div className="flex flex-col gap-6 px-8 w-full sm:w-1/2">
         <div className="flex flex-row gap-0 sm:flex-col sm:gap-4 justify-between uppercase tracking-widest text-sm font-light">
           <h2 className=""> {product.name}</h2>
           {price && price.unit_amount && (

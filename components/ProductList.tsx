@@ -16,7 +16,7 @@ const ProductList = ({ products }: Props) => {
   });
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto pb-10">
       <div>
         <input
           className="uppercase tracking-widest text-sm pb-2"
